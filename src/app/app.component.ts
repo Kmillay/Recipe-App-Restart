@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule} from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Recipe-App-Restart';
+  loadedFeature = 'recipe';
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
