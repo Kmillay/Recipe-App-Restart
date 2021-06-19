@@ -6,10 +6,16 @@ export class Recipe {
   public imagePath: string;
   public ingredients: Ingredient[];
 
-  constructor(name: string, desc: string, imagePath: string, ingredients: Ingredient[]) {
+  constructor({
+    name = '',
+    description = '',
+    imagePath ='',
+    ...rest
+  }) {
+    Object.assign(this, rest)
     this.name = name;
-    this.description = desc;
+    this.description = description;
     this.imagePath = imagePath;
-    this.ingredients = ingredients;
+    this.ingredients = rest.ingredients && rest.ingredients.length ? rest.ingredients : [];
   }
 }
