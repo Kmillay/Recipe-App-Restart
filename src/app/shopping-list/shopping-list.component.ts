@@ -23,7 +23,6 @@ export class ShoppingListComponent implements OnInit {
           this.ingredients = ingredients;
         }
       );
-
     this.loggingService.printLog('Hello from Shopping List Component');
   }
   onEditItem(index: number){

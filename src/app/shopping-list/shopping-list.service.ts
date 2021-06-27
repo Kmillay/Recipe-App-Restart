@@ -6,9 +6,11 @@ export class ShoppingListService {
   ingredientsChanged = new EventEmitter<Ingredient[]>();
   startedEditing = new Subject<number>();
   private ingredients: Ingredient[] = [
-    new Ingredient('Apples',5),
-    new Ingredient('Tomatoes',10)
+    new Ingredient('Oatmeal',3),
+    new Ingredient('Ramen',10)
   ];
+  // editedIngredient: null;
+  // editedIngredientIndex: -1;
 
   getIngredients() {
     return this.ingredients.slice();
