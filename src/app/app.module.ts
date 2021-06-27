@@ -16,7 +16,7 @@ import { LoggingService } from './logging.service';
     HeaderComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
